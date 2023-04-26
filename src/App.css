@@ -1,38 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+header {
+  background-color: #1e3a8a;
+  height: 6.5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 13.5%;
+}
+
+header h1 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.content {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+}
+
+.content h1 {
+  font-size: 1.87rem;
+  font-weight: 900;
+  line-height: 2.2rem;
+  text-align: center;
+}
+
+.content img {
+  width: 80%;
+  margin: 0.5rem;
+  padding: 0.4rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer div {
+  margin-bottom: 3.2rem;
+  display: flex;
+  gap: 1rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+footer div > * {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer p {
+  margin: 0.8rem 23rem;
+  font-size: 0.9rem;
+}
+
+.Quiz {
+  padding: 3rem 0rem 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  text-align: center;
+}
+
+.Quiz p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.Quiz button {
+  background-color: #15803d;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 1.6rem 8.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.Quiz button:hover {
+  background-color: #16a34a;
+}
+
+.timer {
+  border: 1px dashed red;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: red;
+  font-weight: 400;
+}
+
+.wrapper {
+  background-color: #d1d5db;
+  border-top: 2.5px solid #3b82f6;
+  margin-top: 3rem;
+  text-align: center;
+  margin: 3rem auto;
+  width: 50%;
+  padding: 20px 25px;
+}
+
+.result h2 {
+  color: #23c55e;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.result h1 {
+  font-size: 1.7rem;
+}
+.text {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  color: #1f2937;
+}
+
+.result span {
+  color: red;
+}
+
+.result a {
+  background-color: #23c55e;
+  border: none;
+  outline: none;
+  padding: 1.5rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+.result p {
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 5%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .content h1,
+  .Quiz p,
+  .Quiz button,
+  .result h1,.result a {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
   }
+  .content {
+    width: 90%;
+  }
+  .content img {
+    width: 90%;
+    margin: 0.3rem;
+  }
+  .content p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .result h2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .result {
+    gap: 0.7rem;
+}
+  .Quiz button {
+    padding: 1.5rem 2.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+
+  footer p {
+    margin: 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .result h3{
+    font-size: 1.2rem;
+  }
+  .result p{
+    font-size: 0.75rem;
+  }
+
+  .wrapper {
+    background-color: #d1d5db;
+    border-top: 2.5px solid #3b82f6;
+    margin-top: 3rem;
+    text-align: center;
+    margin: 3rem auto;
+    width: 90%;
+    padding: 20px 25px;
+  }
+
+  .timer {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  
+}
 }
