@@ -7,7 +7,7 @@ function Quiz() {
 
     const questions = [
         {
-            question: 'Are You 65 Years Old or Older?',
+            question: 'Are you over 64?',
             options: ["YES, I'M 65 OR OLDER", "NO, I'M 64 OR YOUNGER"],
 
         },

@@ -21,13 +21,12 @@ const Result = () => {
             <div className="wrapper">
                 <div className="text">{text}</div>
                 {showContent && <div className="result">
-                    <h2>Congratulations !</h2>
-                    <h1>You May Pre-Qualify For <span>The Flex Card!</span> </h1>
-
+                    <h2>Congratulation, You Qualify!</h2>
+                    <h1>Make A <span>Quick Call</span> To Claim Your Flex Card!</h1>
+                     <span>Spots remaining: 4</span>
+                     <p className="tap">👇 TAP BELOW TO CALL 👇</p>
                     <a href='tel:858 306-0416'>Call (858) 306-0416</a>
-
                     <h3>We Have Reserved Your Spot.</h3>
-
                     <p>Due to high call volume, your official agent is waiting for only <strong>3 minutes</strong> , then your spot will not be reserved.</p>
                     <Timer />
                 </div>}

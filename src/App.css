@@ -19,7 +19,7 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 13.5%;
+  padding: 0 17%;
 }
 
 header h1 {
@@ -65,51 +65,52 @@ footer {
 footer div {
   margin-bottom: 3.2rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.3rem;
   justify-content: center;
 }
 
 footer div > * {
   color: #3b82f6;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.87rem;
 }
 
 footer p {
   margin: 0.8rem 23rem;
-  font-size: 0.9rem;
+  font-size: 0.87rem;
 }
 
 .Quiz {
-  padding: 3rem 0rem 2rem 0rem;
+  padding: 3rem 0rem 40rem 0rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 25px;
+  gap: 0.8rem;
   text-align: center;
 }
 
 .Quiz p {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
   font-weight: 700;
 }
 
 .Quiz button {
-  background-color: #15803d;
+  background-color: #23c55e;
   outline: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 2rem;
   font-weight: 700;
   color: #ffffff;
-  padding: 1.6rem 8.5rem;
-  border-radius: 1rem;
+  padding: 1rem 13rem;
+  border-radius: 0.5rem;
   cursor: pointer;
+  width: 100%;
 }
 
 .Quiz button:hover {
-  background-color: #16a34a;
+  background-color: #3ee97d;
 }
 
 .timer {
@@ -145,7 +146,10 @@ footer p {
   gap: 1rem;
 }
 .result h1 {
-  font-size: 1.7rem;
+  font-size: 1.5rem ;
+  background-color: #fef08a;
+  width: 100%;
+  font-weight: 700;
 }
 .text {
   font-size: 1rem;
@@ -154,8 +158,21 @@ footer p {
   color: #1f2937;
 }
 
-.result span {
-  color: red;
+.result h1 > span {
+ font-weight: 900;
+}
+
+.result .tap{
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.result > span{
+  background-color: #FEE047;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
 }
 
 .result a {
@@ -172,10 +189,22 @@ footer p {
   text-decoration: none;
 }
 .result p {
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+.result h3{
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
+
+  .result > span,.result .tap{
+    font-size: 1rem;
+  }
+
+  .result a{
+    padding: 1rem;
+  }
   header {
     padding: 0 5%;
   }
@@ -183,7 +212,8 @@ footer p {
   .content h1,
   .Quiz p,
   .Quiz button,
-  .result h1,.result a {
+  .result h1,
+  .result a {
     font-size: 1.2rem;
     line-height: 1.6rem;
   }
@@ -205,10 +235,10 @@ footer p {
 
   .result {
     gap: 0.7rem;
-}
+  }
   .Quiz button {
-    padding: 1.5rem 2.5rem;
-    border-radius: 1rem;
+    padding: 1.2rem 2.5rem;
+    border-radius: 0.5rem;
     cursor: pointer;
   }
 
@@ -217,10 +247,10 @@ footer p {
     font-size: 0.8rem;
   }
 
-  .result h3{
+  .result h3 {
     font-size: 1.2rem;
   }
-  .result p{
+  .result p {
     font-size: 0.75rem;
   }
 
@@ -237,14 +267,9 @@ footer p {
   .timer {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-  
-}
+  }
 
-.Quiz{
-  padding: 1rem 0rem 13rem 0rem;
+  .Quiz {
+    padding: 1rem 0rem 30rem 0rem;
+  }
 }
-}
-
-
-  
-  
