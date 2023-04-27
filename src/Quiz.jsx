@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 
 function Quiz() {
-
+    const wrapperRef = useRef(null);
     const navigate = useNavigate();
 
     const questions = [
@@ -24,6 +24,7 @@ function Quiz() {
 
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion(currentQuestion + 1);
+            wrapperRef.current.scrollIntoView({ behavior: 'smooth' });
         }
 
         if (currentQuestion === questions.length - 1) {
@@ -32,7 +33,7 @@ function Quiz() {
     }
 
     return (
-        <div className='Quiz'>
+        <div className='Quiz'  ref={wrapperRef}>
             <p>{questions[currentQuestion].question}</p>
             {questions[currentQuestion].options.map((option, index) => (
                 <button key={index} onClick={() => handleAnswer(option)}>{option}</button>
